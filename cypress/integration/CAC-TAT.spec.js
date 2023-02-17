@@ -1,37 +1,39 @@
-/// <reference types="Cypress" />
+// reference types = "Cypress" />
 
-describe ('Central de Atendimento ao Cliente TAT', function() {
+describe('Central de Atendimento ao Cliente TAT', function () {
     beforeEach(function () {
         cy.visit('./src/index.html')
     })
 
     it('verifica o título da aplicação', function () {
-        cy.title().should('be.equal', 'Central de Atendimento ao Cliente TAT')       
+        cy.title().should('be.equal', 'Central de Atendimento ao Cliente TAT')
     })
 
-    it('preenche os campos obrigatórios e envia o formulário', function() {
-        const longText = 'Romanticism superstroke postminimalism cubism biedermeier metaphysical art, symbolism sound art maximalism biedermeier neo-expressionism hyperrealism, gründerzeit pop art existentialism impressionism.'
-
-        cy.get('#firstName').type('Jonas Johnny')
-        cy.get('#lastName').type('S. de Arruda')
-        cy.get('#email').type('jonas.johnny.cg@gmail.com')
-        cy.get('#open-text-area').type(longText, { 
-                                                    delay: 0
-                                                 })
+    //exercicio 1
+    it('preenche os campos obrigatórios e envia o formulário', function () {
+        const longText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+        cy.get('#firstName').type('Jonas')
+        cy.get('#lastName').type('Arruda')
+        cy.get('#email').type('jonas.arruda@outlook.com')
+        cy.get('#open-text-area').type(longText, { delay: 0 })
         cy.get('button[type="submit"]').click()
 
         cy.get('.success').should('be.visible')
     })
-
-    it.only('exibe mensagem de erro ao submeter o formulário com um email com formatação inválida', function() {
-        cy.get('#firstName').type('Jonas Johnny')
-        cy.get('#lastName').type('S. de Arruda')
-        cy.get('#email').type('jonas.johnny.cg@gmail,com')
-        cy.get('#open-text-area').type('Text')
+    //exercicio 2
+    it('Exibe mensagem de erro ao submeter o formulário com um email com formatação inválida', function () {
+        cy.get('#firstName').type('Jonas')
+        cy.get('#lastName').type('Arruda')
+        cy.get('#email').type('jonas.arruda@outlook,com') //email invalido.
+        cy.get('#open-text-area').type('Teste')
         cy.get('button[type="submit"]').click()
 
         cy.get('.error').should('be.visible')
-
     })
-
+    //exercicio 3
+    it.only('campo telefone continua vazio quando preenchido com valor não numérico', function () {
+        cy.get('#phone')
+            .type('abcdefghij')
+            .should('have.value', '')
+    })
 })
