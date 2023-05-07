@@ -1,29 +1,38 @@
-# Testes automatizados com Cypress - Básico
+#  Cypress-basico-v2
 
-👋 Seja bem-vindo(a)!
+Este projeto é uma cópia do repositório do curso Cypress básico aplicado pelo [Walmir Filho](https://walmyr.dev) da escola [Talking About Testing](https://talkingabouttesting.com/).
 
-É muito bom tê-lo(a) aqui. Tenho certeza que você vai adorar este curso. ❤️
+## Pré-requisitos
 
-## O que você vai aprender
+É necessário ter Node.js e npm instalados para executar este projeto.
 
-Durante o curso de testes automatizados com Cypress (básico), você vai aprender:
+> Eu usei as versões `v16.13.2` do Node.js e `8.3.2` do npm. Sugiro que utilize as mesmas versões ou versão superiores a fim de garantir a compatibilidade.
 
-- Como configurar um projeto Cypress do zero
-- Como visitar páginas locais e remotas
-- Como lidar com os elementos mais comuns encontrados em aplicações web
-- Como testar _upload_ de arquivos
-- Como realizar as mais diversas verificações de resultados esperados
-- Como criar comandos customizados
-- Como lidar com links que abrem em outra aba do navegador
-- Como rodar testes simulando as dimensões de um dispositivo móvel
-- Como resolver os mesmos problemas de diferentes formas, conhecendo a [API do Cypress](https://docs.cypress.io/api/table-of-contents)
-- Como executar os testes em um _pipeline_ de integração contínua sempre que mudanças ocorrerem no código da aplicação (ou dos testes)
-- Como criar uma documentação mínima para seu projeto de testes automatizados
+## Instalação
 
-## Vamos começar?
+Dentro da pasta do projeto execute o comando `npm install` (ou `npm i` sendo a versão reduzida do comando) para instalar as dependências do projeto através da tag devDependencies do arquivo [package.json](./package.json).
 
-Vá para a seção [estrutura do curso](./lessons/_course-structure_.md).
+## Executando Testes
+
+Você pode executar os testes simulando o acesso por um  navegador desktop ou um navegador de um disposiivo móvel.
+
+## Desktop
+
+Dentro da pasta do projeto execute o comando `npm test`, (ou `npm t` versão a reduzida do comando) para excutar o teste no modo headless, ou seja no modo não interativo.
+
+Ou, execute `npm run cy:open` para abrir o Cypress no modo interativo com a visualização de navegadores desktop.
+
+## Mobile
+
+Execute o comando `npm test:mobile` para rodar o teste no modo headless com a a visualização de navegadores do tipo mobile.
+
+Ou, execute `npm run cy:open:mobile` para abrir o Cypress no interativo com a visualização de navegadores mobile.
+
+## Ajude a apoiar um amigo.
+
+Se você quer apoiar este projeto, deixe uma ⭐. E deixe uma ⭐ também no Projeto do professor.
+
 
 ___
-
-Este é mais um curso da [**Escola Talking About Testing**](https://udemy.com/user/walmyr).
+### Agradecimentos
+Obrigado a mim mesmo. Por dedicar esse tempo ao apredizado. E obrigado ao professor Walmir por compartilhar o seu conhecimento com a comunidade de QA. :globe_with_meridians:

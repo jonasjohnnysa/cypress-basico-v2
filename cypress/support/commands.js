@@ -28,7 +28,7 @@ Cypress.Commands.add('fillMandatoryFieldsAndSubmit', function() {
     cy.get('#firstName').type('Jonas')
     cy.get('#lastName').type('Arruda')
     cy.get('#email').type('jonas.arruda@outlook.com')
-    cy.get('#open-text-area').type('Prenche todos os Campos obrigatórios')
-    cy.get('button[type="submit"]').click()
+    cy.get('#open-text-area').type('Prenche todos os Campos obrigatórios e submete o formulário')
+    cy.contains('button','Enviar').click()
 
 })
