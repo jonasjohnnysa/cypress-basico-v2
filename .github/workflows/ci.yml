@@ -10,15 +10,14 @@ jobs:
         uses: actions/checkout@v3
       # Install NPM dependencies, cache them correctly
       # and run all Cypress tests
-      - name: Skip authentication step
-        run: echo "//registry.npmjs.org/:_authToken=123456789" >> .npmrc
       - name: Cypress run
         uses: cypress-io/github-action@v5
         with:
+          run: echo "//registry.npmjs.org/:_authToken=123456789" >> .npmrc
           build: npm run build
           start: npm start
           browser: chrome
           record: true
         env:
           # pass GitHub token to detect new build vs re-run build
-          GITHUB_TOKEN: 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
+          GITHUB_TOKEN: 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 
