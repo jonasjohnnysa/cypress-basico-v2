@@ -35,4 +35,4 @@ Se você quer apoiar este projeto, deixe uma ⭐. E deixe uma ⭐ também no Pro
 
 ___
 ### Agradecimentos
-Obrigado a mim mesmo. Por dedicar esse tempo ao apredizado. E obrigado ao professor Walmir por compartilhar o seu conhecimento com a comunidade de QA. :globe_with_meridians:
+Obrigado ao professor Walmir por compartilhar o seu conhecimento com a comunidade de QA. :globe_with_meridians:

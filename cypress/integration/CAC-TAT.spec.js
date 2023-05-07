@@ -207,6 +207,9 @@ describe('Central de Atendimento ao Cliente TAT', function () {
 
 
     //Aula 09
+
+
+//Aula 10 - 
 /* Documentação do projeto
 Um bom projeto de testes automatizados deve possuir um mínimo de documentação, para que quem está chegando, possa contribuir.
 
@@ -218,9 +221,11 @@ Aqui vai uma lista do que valorizo em uma documentação:
  -  Passos para rodar os testes
  -  Qualquer outra informação que for pertinente
 
+ ******* Realizado o ajuste do arquivo READEME.md
+
 */
 
-//Aula 10 - Integração Contínua (CI) com GitHub Actions
+//Aula 11 - Integração Contínua (CI) com GitHub Actions
 
-    
+
 })
