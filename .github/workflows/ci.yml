@@ -19,5 +19,4 @@ jobs:
           record: true
         env:
           # pass GitHub token to detect new build vs re-run build
-          GITHUB_TOKEN: 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 
-
+          GITHUB_TOKEN: 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
