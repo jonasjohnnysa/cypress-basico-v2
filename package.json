@@ -13,8 +13,6 @@
     "type": "git",
     "url": "git+https://github.com/wlsf82/cypress-basico-v2.git"
   },
-  "publishConfig" : { 
-    "registry" : "http://localhost:8081/nexus/content/repositories/npm-internal/" },
 
   "keywords": [
     "Testing",
